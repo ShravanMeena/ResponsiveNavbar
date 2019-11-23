@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url('bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+header {
+    background-image: radial-gradient( circle 633px at 51.2% 52%,  rgba(65,109,176,1) 0%, rgba(21,22,26,1) 100.2% );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.main{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 330px;
+    background: rgba(0,0,0,0.4);
+    
+}
+
+
+header .logo{
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+}
+
+header nav{
+    float: right;
+}
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a{
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    padding: 0px 22px;
+    text-decoration: none;
+    display: block;
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+    color: #fff;
+    background-image: radial-gradient( circle 919px at 1.7% 6.1%,  rgba(41,58,76,1) 0%, rgba(40,171,226,1) 100.2% );
+}
+.toggle-menu{
+    float:right;
+    color: #fff;
+    font-size: 24px;
+    line-height: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 0 20px;
+    }
+    .toggle-menu{
+        display: block;
+    }
+
+    header nav {
+        
+        position: absolute;
+        height: calc(100vh - 50px);
+        width: 100%;
+        background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+        top: 50px;
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    header nav.active{
+        left: 0;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    header nav ul a {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+}
